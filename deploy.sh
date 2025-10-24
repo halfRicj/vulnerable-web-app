@@ -51,6 +51,13 @@ import sqlite3
 
 def safe_query(db_connection, user_input):
     cursor = db_connection.cursor()
+    query = "SELECT * FROM users WHERE username = ?"
+    cursor.execute(query, (user_input,))
+    return cursor.fetchall()
+import sqlite3
+
+def safe_query(db_connection, user_input):
+    cursor = db_connection.cursor()
     # Use parameterized queries to prevent SQL injection
     cursor.execute("SELECT * FROM users WHERE username = ?", (user_input,))
     return cursor.fetchall()
