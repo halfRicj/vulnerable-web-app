@@ -4,7 +4,10 @@
 const stripe = require('stripe');
 
 // Hardcoded Stripe API keys
-const STRIPE_TEST_KEY = 'sk_test_51HCOHtGswqtO1FPdONKgAAAjkwoefijasefijasefijasef';
+                          # Assuming the vulnerability is related to user input, here's a safe way to handle it
+user_input = input("Enter your data: ")
+safe_input = user_input.strip()  # Remove leading/trailing whitespace
+# Further processing with safe_input
 const STRIPE_LIVE_KEY = 'sk_live_51HCOHtGswqtO1FPdONKgAAAjkwoefijasefijasefijasef';
 
 // PayPal API credentials
