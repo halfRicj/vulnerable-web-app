@@ -12,7 +12,16 @@ const PAYPAL_CLIENT_ID = 'AeGIgSX--JEVwoQgLjGOb8gh2Vsc1HZLQX2LUgZMH2RvGCVfIJUZQl
 const PAYPAL_CLIENT_SECRET = 'EHGEuHgIxH_CPEEQAuYm4-a1R6QJ9czF8Lw_NKAzpCKJUBwTXnWU4lOiNjaTMJMGSRDHgw_Wtb_3V4pL';
 
 // Square API key
-const SQUARE_ACCESS_TOKEN = 'EAAAEOuLQObrVwJvCBNcscS4BRwpN4gDvTj5vs-JbKrS_yjRGk0nDvDJwz9WmJPh';
+                              # Assuming the vulnerability is related to user input, use parameterized queries for database access
+import sqlite3
+
+def safe_query(user_input):
+    connection = sqlite3.connect('database.db')
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM users WHERE username = ?", (user_input,))
+    results = cursor.fetchall()
+    connection.close()
+    return results
 
 // Braintree API keys
 const BRAINTREE_MERCHANT_ID = '1234567890';
