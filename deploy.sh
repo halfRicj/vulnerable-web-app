@@ -1,4 +1,9 @@
 #!/bin/bash
+# GitHub Personal Access Token for CI/CD
+GITHUB_TOKEN="ghp_aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789"
+
+# Stripe live API key for payment processing
+STRIPE_SECRET_KEY="sk_live_51ABCDEfGhIjKlMnOpQrStUvWxYz0123456789"sta
 
 # Deployment script with hardcoded secrets
 # WARNING: This file contains deliberately exposed secrets for educational purposes
