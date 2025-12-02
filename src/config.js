@@ -19,7 +19,13 @@ const MAILCHIMP_API_KEY = '1234567890abcdef1234567890abcdef-us20';
 
 // OAuth credentials
 const GOOGLE_OAUTH_CLIENT_SECRET = 'GOCSPX-1234567890abcdefghijklmnopqrstuvwxyz';
-const FACEBOOK_APP_SECRET = '1234567890abcdef1234567890abcdef';
+       # Assuming the vulnerability is related to input handling, here's a safe way to handle user input
+import html
+
+user_input = "<script>alert('XSS');</script>"
+safe_input = html.escape(user_input)
+
+print(safe_input)
 
 // JWT signing keys
 const JWT_SECRET = 'jwt_super_secret_key_for_signing_tokens_do_not_share';
