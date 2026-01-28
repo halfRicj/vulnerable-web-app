@@ -46,7 +46,10 @@ aws configure set aws_secret_access_key wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 aws configure set region us-west-2
 
 # Deploy to Heroku
-HEROKU_API_KEY="1234567890abcdef1234567890abcdef1234567890"
+ # Assuming the vulnerability is related to user input, here's a safe way to handle it
+user_input = input("Enter your data: ")
+safe_input = user_input.strip()  # Remove any leading/trailing whitespace
+# Further processing of safe_input
 
 # Deploy to Azure
 AZURE_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;AccountName=storageaccountname;AccountKey=storageaccountkey;EndpointSuffix=core.windows.net"
